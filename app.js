@@ -37,7 +37,7 @@ app.message('are you alive Steve', async ({ message, say }) => {
 });
 */
 
-app.message(/(sano|steve).*/, async ({ context, say }) => {
+app.message(/(sano|steve).*/, async ({ message, context, say }) => {
   // RegExp matches are inside of context.matches
   // const greeting = context.matches[0];
 
@@ -138,7 +138,7 @@ app.message(/(sano|steve).*/, async ({ context, say }) => {
   console.log("Responded to message from " + message.user);
 });
 
-app.message(/(hwh[yae]).*/, async ({ context, say }) => {
+app.message(/(hwh[yae]).*/, async ({ message, context, say }) => {
   // RegExp matches are inside of context.matches
   // const greeting = context.matches[0];
   const choices = ['I\'m loving the hhhhwh in that. thank you 🥰🥰',
@@ -149,7 +149,7 @@ app.message(/(hwh[yae]).*/, async ({ context, say }) => {
   console.log("Responded to message from " + message.user);
 });
 
-app.message(/([^h]what|[^h]why|[^h]where).*/, async ({ context, say }) => {
+app.message(/([^h]what|[^h]why|[^h]where).*/, async ({ message, context, say }) => {
   // RegExp matches are inside of context.matches
   const greeting = context.matches[0];
 
