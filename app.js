@@ -1,4 +1,4 @@
-const { App } = require('@slack/bolt');
+const { App } = require('@steve');
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
