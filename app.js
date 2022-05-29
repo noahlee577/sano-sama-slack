@@ -31,16 +31,10 @@ const memeLinks = [
 
 
 
-// Listens to incoming messages that contain "hello"
-app.message('hello', async ({ message, say }) => {
+// a life test
+app.message('are you alive Steve', async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
-  await say('Hey there <@${message.user}>!');
-});
-
-// Listens to incoming messages that contain "goodbye"
-app.message('goodbye', async ({ message, say }) => {
-  // say() sends a message to the channel where the event was triggered
-  await say(`See ya later, <@${message.user}> :wave:`);
+  await say(`Yippee <@${message.user}>!`);
 });
 
 app.message(/(sano|steve).*/, async ({ context, say }) => {
@@ -118,17 +112,30 @@ app.message(/(sano|steve).*/, async ({ context, say }) => {
                      "Aww! 🥺"
                     ];
 
-    await say(cat_intro[Math.floor(Math.random() * cat_intro.length)] + catfacts[Math.floor(Math.random() * catfacts.length)] + ' ' + cat_flair[Math.floor(Math.random() * cat_flair.length)]);
+    picked_response = cat_intro[Math.floor(Math.random() * cat_intro.length)] + catfacts[Math.floor(Math.random() * catfacts.length)] + ' ' + cat_flair[Math.floor(Math.random() * cat_flair.length)]);
   }
 
-  // if an empty string response is chosen--fill with meme attachment
-  // if (!picked_response){
-  //   msgAttachment['type'] = 'image';
-  //   msgAttachment['url'] = memeLinks[Math.floor(Math.random() * memeLinks.length)];
-  //   attachToggle = true;
-  // }
-
-  await say(picked_response);
+  //if an empty string response is chosen--fill with meme attachment
+  if (!picked_response){
+    await say({
+    blocks: [
+        {
+          "type": "image",
+          "title": {
+            "type": "plain_text",
+            "text": "yaet"
+          },
+          "block_id": "mememes",
+          "image_url": memeLinks[Math.floor(Math.random() * memeLinks.length)],
+          "alt_text": "yeet"
+        }
+      ]
+    });
+  }
+  // else it's a plaintext
+  else {
+    await say(picked_response);
+  }
 });
 
 app.message(/(hwh[yae]).*/, async ({ context, say }) => {
