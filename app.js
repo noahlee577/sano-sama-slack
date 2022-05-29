@@ -30,12 +30,13 @@ const memeLinks = [
                 ];
 
 
-
+/*
 // a life test
 app.message('are you alive Steve', async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
   await say(`Yippee <@${message.user}>!`);
 });
+*/
 
 app.message(/(sano|steve).*/, async ({ context, say }) => {
   // RegExp matches are inside of context.matches
@@ -126,7 +127,7 @@ app.message(/(sano|steve).*/, async ({ context, say }) => {
             "text": "yaet"
           },
           "block_id": "mememes",
-          "image_url": memeLinks[Math.floor(Math.random() * memeLinks.length)],
+          "image_url": "xyz",
           "alt_text": "yeet"
         }
       ]
