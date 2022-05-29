@@ -13,8 +13,6 @@ const app = new App({
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
-var botID = process.env.BOT_ID;
-
 
 var catfacts = [
                 "A group of cats is called a clowder. A group of cool cats is called a Chorale 😘",
