@@ -113,11 +113,10 @@ app.message(/(sano|steve).*/, async ({ context, say }) => {
                      "Aww! 🥺"
                     ];
 
-    picked_response = cat_intro[Math.floor(Math.random() * cat_intro.length)] + catfacts[Math.floor(Math.random() * catfacts.length)] + ' ' + cat_flair[Math.floor(Math.random() * cat_flair.length)]);
+    await say(cat_intro[Math.floor(Math.random() * cat_intro.length)] + catfacts[Math.floor(Math.random() * catfacts.length)] + ' ' + cat_flair[Math.floor(Math.random() * cat_flair.length)]);
   }
-
   //if an empty string response is chosen--fill with meme attachment
-  if (!picked_response){
+  else if (!picked_response){
     await say({
     blocks: [
         {
@@ -127,7 +126,7 @@ app.message(/(sano|steve).*/, async ({ context, say }) => {
             "text": "yaet"
           },
           "block_id": "mememes",
-          "image_url": "xyz",
+          "image_url": memeLinks[Math.floor(Math.random() * memeLinks.length)],
           "alt_text": "yeet"
         }
       ]
