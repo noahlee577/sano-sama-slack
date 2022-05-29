@@ -25,7 +25,6 @@ const memeLinks = [
                   'https://i.groupme.com/580x557.jpeg.48b980efe8fb434d9ab619c2454ded7c',   // "Good one lol"
                   'https://i.groupme.com/580x557.jpeg.3606a48cd2ef4ab2a1fae63cd36d3d62', // mfw someone posts on GroupMe
                   'https://i.groupme.com/1331x1996.jpeg.57011624684a41cfa90c2e8da5240378.large', // yummy voices
-                  //'https://i.groupme.com/1280x960.jpeg.8fdfc73541d749fdb26802c9fa0a1c9d.large', // Counting days until reunion
                   'https://i.groupme.com/2048x1366.jpeg.1aafacaebe1c49599a67d03c7a48b5e8' //wholesome meme
                 ];
 
@@ -136,6 +135,7 @@ app.message(/(sano|steve).*/, async ({ context, say }) => {
   else {
     await say(picked_response);
   }
+  console.log("Responded to message from " + message.user);
 });
 
 app.message(/(hwh[yae]).*/, async ({ context, say }) => {
@@ -146,6 +146,7 @@ app.message(/(hwh[yae]).*/, async ({ context, say }) => {
                 ];
 
   await say(choices[Math.floor(Math.random() * choices.length)]);
+  console.log("Responded to message from " + message.user);
 });
 
 app.message(/([^h]what|[^h]why|[^h]where).*/, async ({ context, say }) => {
@@ -155,6 +156,8 @@ app.message(/([^h]what|[^h]why|[^h]where).*/, async ({ context, say }) => {
   if(Math.floor(Math.random() * 4)%3 == 0){
     await say('*H'+greeting);
   }
+
+  console.log("Responded to message from " + message.user);
 
 });
 
