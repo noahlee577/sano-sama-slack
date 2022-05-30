@@ -12,7 +12,7 @@ const catfacts = [
                 "Much like college students, cats sleep 70% of their lives. (I feel attacked)",
                 "Cats can’t taste sweetness. Now we know why they don't lick Chorale members more often 😥",
                 "Owning a cat can reduce the risk of stroke and heart attack by a third. Singing with Chorale can, too, probably?!",
-                //"The world’s richest cat is worth $13 million after his human passed away and left her fortune to him. Still not richer than James' bass notes tho 😉",
+                "The world’s richest cat is worth $13 million after his human passed away and left her fortune to him. Still not richer than Akshar's bass notes tho 😉",
                 //"Cats make more than 100 different sounds whereas dogs make around 10. Stay tuned for how many sounds Courtney can make while getting her back cracked...",
                 //"Hearing is the strongest of cat’s senses: They can hear sounds as high as 64 kHz — compared with humans, who can hear only as high as 20 kHz. That moment when you're suddenly envious of cats while listening to Jin-Hee sing...",
                 //"The Egyptian Mau is the oldest breed of cat. Deadmau5 comes close second.",
@@ -29,13 +29,12 @@ const memeLinks = [
                 ];
 
 
-/*
+
 // a life test
-app.message('are you alive Steve', async ({ message, say }) => {
+app.message(/(aloha).*/, async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
-  await say(`Yippee <@${message.user}>!`);
+  await say(`Aloha <@${message.user}>!`);
 });
-*/
 
 app.message(/(sano|steve).*/, async ({ message, context, say }) => {
   if(message.user != "USLACKBOT"){
@@ -44,6 +43,10 @@ app.message(/(sano|steve).*/, async ({ message, context, say }) => {
                    '*messa di voce\'ing intensifies*',
                    ':sassy-sano:',
                    ':master-sano:',
+                   ':\'ssup:',
+                   ':acoustic_guitar::acoustic_guitar::acoustic_guitar:',
+                   'I wanna be ~vibin :catjam: in :hawaii:~',
+                   ':blobcatglowsticks: Go Chorale go! :blobcatglowsticks:',
                    //cool(),
                    //'Meet me at MemSquirt',
                    /*
@@ -54,7 +57,7 @@ app.message(/(sano|steve).*/, async ({ message, context, say }) => {
                    '@Becca ',
                    '@Maya ',
                    '@Julia ',
-                   '@Millie ',
+                   '@Millie don't graduate plz thx :crycat:',
                    '@Toby ',
                    '@Maïgane ',
                    '@Esther ',
@@ -84,7 +87,6 @@ app.message(/(sano|steve).*/, async ({ message, context, say }) => {
                    'catfacts_trigger', // Mohr kat faxs
                    '',  // empty text will indicate the need for meme-ing ;)
                    '',  // Add a few for increased meme chances
-                   '',
                    ''
                   ];
     picked_response = choices[Math.floor(Math.random() * choices.length)];
