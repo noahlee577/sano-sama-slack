@@ -190,13 +190,15 @@ app.message(/([^h]when)/, async ({ message, say }) => {
 app.message(/([^h]where)/, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
     if(Math.floor(Math.random() * 3)%2 == 0){
-      if(if(Math.floor(Math.random() * 5)%4 == 0){
+      const roll = Math.floor(Math.random() * 5)%4;
+
+      if(roll == 0){
         await say('*Hwhere');
       }
-      else if(if(Math.floor(Math.random() * 5)%4 == 1){
+      else if(roll == 1){
         await say('*Hwhere is the Hay?');
       }
-      else if(if(Math.floor(Math.random() * 5)%4 == 2){
+      else if(roll == 2){
         await say('*Hwhere is the Blush?');
       }
       else {
