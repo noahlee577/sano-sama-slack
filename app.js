@@ -181,8 +181,8 @@ app.message(/(messa di voce).*/, async ({ message, say }) => {
 // NO UWU ALLOWED
 app.message(/(uwu).*/, async ({ message, say }) => {
   const choices = ['NO UWU\'ING ALLOWED IN THIS GROUP',
-                 '...u...uwu @'+sender_name,
-                 '@' + sender_name + ' your weeb is showing!',
+                 `...u...uwu ${message.user}`,
+                 `${message.user} your weeb is showing!`,
                  'Senpai will never notice you! 😤😤',
                  'THE ONLY ACCEPTABLE WEEBSPEAK IN THIS GROUP IS >.< AND ONLY BECAUSE IT\'S A REVERSE MESSA DI VOCE!!'
                ];
