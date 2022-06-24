@@ -28,12 +28,12 @@ const memeLinks = [
                 ];
 
 // a life test
-app.message(/(aloha).*/, async ({ message, say }) => {
+app.message(/(aloha).*/i, async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
   await say(`Aloha <@${message.user}>!`);
 });
 
-app.message(/(sano|steve).*/, async ({ message, context, say }) => {
+app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
   if(message.user != "USLACKBOT"){
     const choices = [
                    'Hosano in excelsis',
@@ -143,7 +143,7 @@ app.message(/(sano|steve).*/, async ({ message, context, say }) => {
   }
 });
 
-app.message(/(hwh[yae]).*/, async ({ message, context, say }) => {
+app.message(/(hwh[yae]).*/i, async ({ message, context, say }) => {
   if(message.user != "USLACKBOT"){
     // RegExp matches are inside of context.matches
     // const greeting = context.matches[0];
@@ -156,7 +156,7 @@ app.message(/(hwh[yae]).*/, async ({ message, context, say }) => {
   }
 });
 
-app.message(/([^h]what)/, async ({ message, say }) => {
+app.message(/([^h]what)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
     if(Math.floor(Math.random() * 3)%2 == 0){
       await say('*Hwhat');
@@ -166,7 +166,7 @@ app.message(/([^h]what)/, async ({ message, say }) => {
   }
 });
 
-app.message(/([^h]why)/, async ({ message, say }) => {
+app.message(/([^h]why)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
     if(Math.floor(Math.random() * 3)%2 == 0){
       await say('*Hwhy');
@@ -177,7 +177,7 @@ app.message(/([^h]why)/, async ({ message, say }) => {
 });
 
 
-app.message(/([^h]when)/, async ({ message, say }) => {
+app.message(/([^h]when)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
     if(Math.floor(Math.random() * 3)%2 == 0){
       await say('*Hwhen');
@@ -187,7 +187,7 @@ app.message(/([^h]when)/, async ({ message, say }) => {
   }
 });
 
-app.message(/([^h]where)/, async ({ message, say }) => {
+app.message(/([^h]where)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
     if(Math.floor(Math.random() * 3)%2 == 0){
       const roll = Math.floor(Math.random() * 5)%4;
@@ -212,7 +212,7 @@ app.message(/([^h]where)/, async ({ message, say }) => {
 
 
 // yes
-app.message(/(messa di voce).*/, async ({ message, say }) => {
+app.message(/(messa di voce).*/i, async ({ message, say }) => {
   var choices = ['I know I bring up messa di voce a lot, but now get ready for the reverse messa di voce: >.<',
                  'messa di voce had me like >.<',
                  'YES MESSA DI VOCE THAT LIKE BUTTON :likeitalian:'
@@ -225,7 +225,7 @@ app.message(/(messa di voce).*/, async ({ message, say }) => {
 
 
 // yes
-app.message(/(boba).*/, async ({ message, say }) => {
+app.message(/(boba).*/i, async ({ message, say }) => {
   await say(` :boba1::boba2:
     :boba3::boba4:
     :boba5::boba6:`);
@@ -236,7 +236,7 @@ app.message(/(boba).*/, async ({ message, say }) => {
 
 
 // boy treble
-app.message(/(boy treble).*/, async ({ message, say }) => {
+app.message(/(boy treble).*/i, async ({ message, say }) => {
   var choices = ['Boy treble, you say; oh boy oh boy let me tell you all about my life as a boy treble',
                  'ope let me boy treble right past ya',
                  'hippity hoppity boi treble in your area',
@@ -249,7 +249,7 @@ app.message(/(boy treble).*/, async ({ message, say }) => {
 });
 
 // NO UWU ALLOWED
-app.message(/(uwu).*/, async ({ message, say }) => {
+app.message(/(uwu).*/i, async ({ message, say }) => {
   const choices = ['NO UWU\'ING ALLOWED IN THIS GROUP',
                  `...u...uwu ${message.user}`,
                  `${message.user} your weeb is showing!`,
