@@ -45,7 +45,11 @@ app.message(/(sano|steve).*/, async ({ message, context, say }) => {
                    ':master-sano:',
                    ':\'ssup:',
                    ':acoustic_guitar::acoustic_guitar::acoustic_guitar:',
-                   'I wanna be ~vibin :catjam: in :hawaii:~',
+                   'I wanna be _vibin_ :catjam: in :hawaii:',
+                   'it me ya fav boi treble reportin in',
+                   'accent that messa di voce button',
+                   'ope let me slack key vamp right past ya',
+                   'hippity hoppity Chorale memes are quality',
                    ':blobcatglowsticks: Go Chorale go! :blobcatglowsticks:',
                    //cool(),
                    //'Meet me at MemSquirt',
@@ -157,7 +161,7 @@ app.message(/([^h]what|[^h]why|[^h]where)/, async ({ message, context, say }) =>
     // RegExp matches are inside of context.matches
     const greeting = context.matches[0];
 
-    if(Math.floor(Math.random() * 4)%3 == 0){
+    if(Math.floor(Math.random() * 3)%2 == 0){
       await say('*H'+greeting);
     }
 
@@ -171,6 +175,31 @@ app.message(/(messa di voce).*/, async ({ message, say }) => {
   var choices = ['I know I bring up messa di voce a lot, but now get ready for the reverse messa di voce: >.<',
                  'messa di voce had me like >.<',
                  'YES MESSA DI VOCE THAT LIKE BUTTON :likeitalian:'
+                ];
+
+  await say(choices[Math.floor(Math.random() * choices.length)]);
+  console.log(`Responded to message from ${message.user}`);
+
+});
+
+
+// yes
+app.message(/(boba).*/, async ({ message, say }) => {
+  await say(`:boba1::boba2:
+    :boba3::boba4:
+    :boba5::boba6:`);
+    
+  console.log(`Responded to message from ${message.user}`);
+
+});
+
+
+// boy treble
+app.message(/(boy treble).*/, async ({ message, say }) => {
+  var choices = ['Boy treble, you say; oh boy oh boy let me tell you all about my life as a boy treble',
+                 'ope let me boy treble right past ya',
+                 'hippity hoppity boi treble in your area',
+                 'it\'s me, ya fav boi treble'
                 ];
 
   await say(choices[Math.floor(Math.random() * choices.length)]);
