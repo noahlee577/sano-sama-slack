@@ -152,7 +152,7 @@ app.message(/(hwh[yae]).*/, async ({ message, context, say }) => {
   }
 });
 
-app.message(/([^h]what|[^h]why|[^h]where).*/, async ({ message, context, say }) => {
+app.message(/([^h]what|[^h]why|[^h]where)/, async ({ message, context, say }) => {
   if(message.user != "USLACKBOT"){
     // RegExp matches are inside of context.matches
     const greeting = context.matches[0];
@@ -164,6 +164,36 @@ app.message(/([^h]what|[^h]why|[^h]where).*/, async ({ message, context, say }) 
     console.log(`Responded to message from ${message.user}`);
   }
 });
+
+
+// yes
+app.message(/(messa di voce).*/, async ({ message, say }) => {
+  var choices = ['I know I bring up messa di voce a lot, but now get ready for the reverse messa di voce: >.<',
+                 'messa di voce had me like >.<',
+                 'YES MESSA DI VOCE THAT LIKE BUTTON :likeitalian:'
+                ];
+
+  await say(choices[Math.floor(Math.random() * choices.length)]);
+  console.log(`Responded to message from ${message.user}`);
+
+});
+
+// NO UWU ALLOWED
+app.message(/(uwu).*/, async ({ message, say }) => {
+  const choices = ['NO UWU\'ING ALLOWED IN THIS GROUP',
+                 '...u...uwu @'+sender_name,
+                 '@' + sender_name + ' your weeb is showing!',
+                 'Senpai will never notice you! 😤😤',
+                 'THE ONLY ACCEPTABLE WEEBSPEAK IN THIS GROUP IS >.< AND ONLY BECAUSE IT\'S A REVERSE MESSA DI VOCE!!'
+               ];
+
+  await say(choices[Math.floor(Math.random() * choices.length)]);
+  console.log(`Responded to message from ${message.user}`);
+
+});
+
+
+
 
 (async () => {
   // Start your app
