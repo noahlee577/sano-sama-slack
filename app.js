@@ -51,6 +51,9 @@ app.message(/(sano|steve).*/, async ({ message, context, say }) => {
                    'ope let me slack key vamp right past ya',
                    'hippity hoppity Chorale memes are quality',
                    ':blobcatglowsticks: Go Chorale go! :blobcatglowsticks:',
+                   `:boba1::boba2:
+                    :boba3::boba4:
+                    :boba5::boba6:`,
                    //cool(),
                    //'Meet me at MemSquirt',
                    /*
@@ -185,10 +188,10 @@ app.message(/(messa di voce).*/, async ({ message, say }) => {
 
 // yes
 app.message(/(boba).*/, async ({ message, say }) => {
-  await say(`:boba1::boba2:
+  await say(` :boba1::boba2:
     :boba3::boba4:
     :boba5::boba6:`);
-    
+
   console.log(`Responded to message from ${message.user}`);
 
 });
