@@ -17,7 +17,6 @@ const catfacts = [
                 //"Hearing is the strongest of cat’s senses: They can hear sounds as high as 64 kHz — compared with humans, who can hear only as high as 20 kHz. That moment when you're suddenly envious of cats while listening to Jin-Hee sing...",
                 //"The Egyptian Mau is the oldest breed of cat. Deadmau5 comes close second.",
                 "Cats can move their ears 180 degrees. Getting the best seats in the house wherever they are, so lucky!"
-
               ];
 
 const memeLinks = [
@@ -27,8 +26,6 @@ const memeLinks = [
                   'https://i.groupme.com/1331x1996.jpeg.57011624684a41cfa90c2e8da5240378.large', // yummy voices
                   'https://i.groupme.com/2048x1366.jpeg.1aafacaebe1c49599a67d03c7a48b5e8' //wholesome meme
                 ];
-
-
 
 // a life test
 app.message(/(aloha).*/, async ({ message, say }) => {
@@ -159,13 +156,52 @@ app.message(/(hwh[yae]).*/, async ({ message, context, say }) => {
   }
 });
 
-app.message(/([^h]what|[^h]why|[^h]where)/, async ({ message, context, say }) => {
+app.message(/([^h]what)/, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    // RegExp matches are inside of context.matches
-    const greeting = context.matches[0];
-
     if(Math.floor(Math.random() * 3)%2 == 0){
-      await say('*H'+greeting);
+      await say('*Hwhat');
+    }
+
+    console.log(`Responded to message from ${message.user}`);
+  }
+});
+
+app.message(/([^h]why)/, async ({ message, say }) => {
+  if(message.user != "USLACKBOT"){
+    if(Math.floor(Math.random() * 3)%2 == 0){
+      await say('*Hwhy');
+    }
+
+    console.log(`Responded to message from ${message.user}`);
+  }
+});
+
+
+app.message(/([^h]when)/, async ({ message, say }) => {
+  if(message.user != "USLACKBOT"){
+    if(Math.floor(Math.random() * 3)%2 == 0){
+      await say('*Hwhen');
+    }
+
+    console.log(`Responded to message from ${message.user}`);
+  }
+});
+
+app.message(/([^h]where)/, async ({ message, say }) => {
+  if(message.user != "USLACKBOT"){
+    if(Math.floor(Math.random() * 3)%2 == 0){
+      if(if(Math.floor(Math.random() * 5)%4 == 0){
+        await say('*Hwhere');
+      }
+      else if(if(Math.floor(Math.random() * 5)%4 == 1){
+        await say('*Hwhere is the Hay?');
+      }
+      else if(if(Math.floor(Math.random() * 5)%4 == 2){
+        await say('*Hwhere is the Blush?');
+      }
+      else {
+        await say('*Hwhere is the Bee?');
+      }
     }
 
     console.log(`Responded to message from ${message.user}`);
