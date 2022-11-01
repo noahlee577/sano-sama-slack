@@ -8,14 +8,30 @@ const app = new App({
 
 const catfacts = [
                 "A group of cats is called a clowder. A group of cool cats is called a Chorale 😘",
+                //"When cats climb a tree, they can't go back down it head first. This is because their claws are facing the same way, instead, they have to go back down backward.",
                 //"Cats have over 20 muscles that control their ears. All straining to hear us sing...",
                 "Much like college students, cats sleep 70% of their lives. (I feel attacked)",
+                '"The Hungarian word for "quotation marks," macskaköröm, literally translates to "cat claws."',
                 "Cats can’t taste sweetness. Now we know why they don't lick Chorale members more often 😥",
                 "Owning a cat can reduce the risk of stroke and heart attack by a third. Singing with Chorale can, too, probably?!",
                 "The world’s richest cat is worth $13 million after his human passed away and left her fortune to him. Still not richer than Akshar's bass notes tho 😉",
                 //"Cats make more than 100 different sounds whereas dogs make around 10. Stay tuned for how many sounds Courtney can make while getting her back cracked...",
-                //"Hearing is the strongest of cat’s senses: They can hear sounds as high as 64 kHz — compared with humans, who can hear only as high as 20 kHz. That moment when you're suddenly envious of cats while listening to Jin-Hee sing...",
+                "Hearing is the strongest of cat’s senses: They can hear sounds as high as 64 kHz — compared with humans, who can hear only as high as 20 kHz. That moment when you're suddenly envious of cats while listening to Jin-Hee sing...",
                 //"The Egyptian Mau is the oldest breed of cat. Deadmau5 comes close second.",
+                //"In Holland’s embassy in Moscow, Russia, the staff noticed that the two Siamese cats kept meowing and clawing at the walls of the building. Their owners finally investigated, thinking they would find mice. Instead, they discovered microphones hidden by Russian spies. The cats heard the microphones when they turned on. Instead of alerting the Russians that they found said microphones, they simply staged conversations about delays in work orders and suddenly problems were fixed much quicker!",
+                //"The oldest cat video dates back to 1894 and is called 'Boxing Cats'",
+                //"The oldest cat to ever live was Creme Puff, who lived to be 38 years and 3 days old.",
+                //"The more you talk to your cat, the more it will talk to you.",
+                //"Nikola Tesla was inspired to investigate electricity after his cat, Macak, gave him a static shock.",
+                //"Isaac Newton invented the cat flap after his own cat, Spithead, kept opening the door and spoiling his light experiments.",
+                //"It was considered a capital offense to kill a cat in ancient Egypt.",
+                "Purring actually improves bone density and promotes healing within a cat. The purring frequency — 26 Hertz — apparently aides in tissue regeneration and can help stimulate the repair of weak and brittle bones. Explains why Kaile's low notes are so healing 🤤",
+                "Cats involuntarily open their mouths after smelling something, tbh I do the same when I hear Julia sing 😲",
+                "The world's largest domestic cat is a Maine Coon cat named Stewie, who measures an astounding 48.5 inches long. Still not as tall as Kyle tho 😎",
+                'A female cat is called a “molly” or a “queen.” yassssss',
+                "A cat’s heart beats nearly twice as fast as a human's heart. :heartbeat:",
+                "Cats are responsible for the decimation of 33 different animal species, and they kill around 2.4 million birds a year. Sorry Maya :meow-reachcry::dove_of_peace:",
+                "Cats actually CAN be loyal. A cat named Toldo was renowned in the village of Montagnana, Italy, for visiting his owner's grave every day for a year after he died. ALMOST as loyal as Toby is to staying in Chorale :100_ani::respect:",
                 "Cats can move their ears 180 degrees. Getting the best seats in the house wherever they are, so lucky!"
               ];
 
@@ -30,7 +46,10 @@ const memeLinks = [
 // a life test
 app.message(/(aloha).*/i, async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
-  await say(`Aloha <@${message.user}>!`);
+  const choices = [`Aloha <@${message.user}>!`,
+                   `Hey hey <@${message.user}>!`];
+
+  await say(choices[Math.floor(Math.random() * choices.length)]);
 });
 
 app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
@@ -51,6 +70,7 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                    `:boba1::boba2:
                     :boba3::boba4:
                     :boba5::boba6:`,
+                    'THAT\'S IT!!!',
                    //cool(),
                    //'Meet me at MemSquirt',
                    /*
@@ -103,6 +123,7 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                        "Why make Steve memes when you can read cat facts? ",
                        "And it's time for... random cat facts! ",
                        //"Cat Facts! 😜 ",
+                       "It's meow time~ ",
                        'Oh my, would you look at the time?! It\'s time for.... a cat fact!! 😜'
                      ];
 
@@ -143,7 +164,7 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
   }
 });
 
-app.message(/(hwh[yae]).*/i, async ({ message, context, say }) => {
+app.message(/(h.?wh[yae]).*/i, async ({ message, context, say }) => {
   if(message.user != "USLACKBOT"){
     // RegExp matches are inside of context.matches
     // const greeting = context.matches[0];
@@ -158,7 +179,7 @@ app.message(/(hwh[yae]).*/i, async ({ message, context, say }) => {
 
 app.message(/([^h]what)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       await say('*Hwhat');
     }
 
@@ -168,7 +189,7 @@ app.message(/([^h]what)/i, async ({ message, say }) => {
 
 app.message(/([^h]why)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       await say('*Hwhy');
     }
 
@@ -179,7 +200,7 @@ app.message(/([^h]why)/i, async ({ message, say }) => {
 
 app.message(/([^h]when)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       await say('*Hwhen');
     }
 
@@ -189,7 +210,7 @@ app.message(/([^h]when)/i, async ({ message, say }) => {
 
 app.message(/([^h]where)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       const roll = Math.floor(Math.random() * 5)%4;
 
       if(roll == 0){
@@ -226,14 +247,22 @@ app.message(/(messa di voce).*/i, async ({ message, say }) => {
 
 // yes
 app.message(/(boba).*/i, async ({ message, say }) => {
-  await say(` :boba1::boba2:
-    :boba3::boba4:
-    :boba5::boba6:`);
+  await say(`:boba1::boba2:
+:boba3::boba4:
+:boba5::boba6:`);
 
   console.log(`Responded to message from ${message.user}`);
 
 });
 
+
+// test case
+app.message(/(test_invoke).*/i, async ({ message, say }) => {
+  await say(`:boba1::boba2:\n:boba3::boba4:\n:boba5::boba6:`);
+
+  console.log(`Responded to message from ${message.user}`);
+
+});
 
 // boy treble
 app.message(/(boy treble).*/i, async ({ message, say }) => {
