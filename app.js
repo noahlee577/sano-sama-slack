@@ -297,7 +297,7 @@ app.message(/(test_invoke).*/i, async ({ message, say }) => {
                   ':exploding_head: when the basses hit that low D :mindblown::weary::sweat_drops::walter_faint:',
                   'Friendship ended with GroupMe, now Slack is my best friend'
                 ];
-  picked_response = choices[Math.floor(Math.random() * choices.length)];
+  var picked_response = choices[Math.floor(Math.random() * choices.length)];
   await say(picked_respones);
 
   console.log(`Responded to message from ${message.user}`);
