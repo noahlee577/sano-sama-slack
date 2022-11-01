@@ -77,7 +77,7 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                     ':tobu:',
                     ':amaze:',
                     ':dicaprio_laugh:',
-                    ':bear_roll',
+                    ':bear_roll:',
                     '@Trip ya might want to see a doctor for all those :shaking-eyes: reaccs... :lizard-hehehehe:',
                     ':0_0:',
                     'Another random shout-out to our lovely social chairs for bringing us closer :meow_heart::cat-meow-hearts::heart::heart::heart:',
@@ -281,7 +281,24 @@ app.message(/(boba).*/i, async ({ message, say }) => {
 
 // test case
 app.message(/(test_invoke).*/i, async ({ message, say }) => {
-  await say(`:boba1::boba2:\n:boba3::boba4:\n:boba5::boba6:`);
+  const choices = [
+                 `:boba1::boba2:\n:boba3::boba4:\n:boba5::boba6:`,
+                  'THAT\'S IT!!!',
+                  ':10_10:',
+                  ':resitas:',
+                  ':cooldoge:',
+                  ':tobu:',
+                  ':amaze:',
+                  ':dicaprio_laugh:',
+                  ':bear_roll:',
+                  '@Trip ya might want to see a doctor for all those :shaking-eyes: reaccs... :lizard-hehehehe:',
+                  ':0_0:',
+                  'Another random shout-out to our lovely social chairs for bringing us closer :meow_heart::cat-meow-hearts::heart::heart::heart:',
+                  ':exploding_head: when the basses hit that low D :mindblown::weary::sweat_drops::walter_faint:',
+                  'Friendship ended with GroupMe, now Slack is my best friend'
+                ];
+  picked_response = choices[Math.floor(Math.random() * choices.length)];
+  await say(picked_respones);
 
   console.log(`Responded to message from ${message.user}`);
 
