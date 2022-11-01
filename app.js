@@ -30,7 +30,7 @@ const catfacts = [
                 "The world's largest domestic cat is a Maine Coon cat named Stewie, who measures an astounding 48.5 inches long. Still not as tall as Kyle tho 😎",
                 'A female cat is called a “molly” or a “queen.” yassssss',
                 "A cat’s heart beats nearly twice as fast as a human's heart. :heartbeat:",
-                "Cats are responsible for the decimation of 33 different animal species, and they kill around 2.4 million birds a year. Sorry Maya :meow-reachcry::dove_of_peace:",
+                "Cats are responsible for the decimation of 33 different animal species, and they kill around 2.4 million birds a year. :meow_knife: Sorry Maya :meow-reachcry::dove_of_peace:",
                 "Cats actually CAN be loyal. A cat named Toldo was renowned in the village of Montagnana, Italy, for visiting his owner's grave every day for a year after he died. ALMOST as loyal as Toby is to staying in Chorale :100_ani::respect:",
                 "Cats can move their ears 180 degrees. Getting the best seats in the house wherever they are, so lucky!"
               ];
@@ -67,10 +67,15 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                    'ope let me slack key vamp right past ya',
                    'hippity hoppity Chorale memes are quality',
                    ':blobcatglowsticks: Go Chorale go! :blobcatglowsticks:',
-                   `:boba1::boba2:
-                    :boba3::boba4:
-                    :boba5::boba6:`,
+                   `:boba1::boba2:\n:boba3::boba4:\n:boba5::boba6:`,
                     'THAT\'S IT!!!',
+                    ':10_10:',
+                    ':resitas:',
+                    ':cooldoge:'
+                    ':tobu:',
+                    ':amaze:',
+                    ':dicaprio_laugh:',
+                    ':bear_roll',
                    //cool(),
                    //'Meet me at MemSquirt',
                    /*
@@ -134,6 +139,10 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                        "Le Meow 😺",
                        "yeet.",
                        "Stev-eow!",
+                       ":meow_floof_pat:",
+                       ":meow-dj:",
+                       ":meow-bongotap:",
+                       ":cat_keyboard:",
                        "Aww! 🥺"
                       ];
 
@@ -236,6 +245,7 @@ app.message(/([^h]where)/i, async ({ message, say }) => {
 app.message(/(messa di voce).*/i, async ({ message, say }) => {
   var choices = ['I know I bring up messa di voce a lot, but now get ready for the reverse messa di voce: >.<',
                  'messa di voce had me like >.<',
+                 ':amaze: when that messa di voce hits :amaze:',
                  'YES MESSA DI VOCE THAT LIKE BUTTON :likeitalian:'
                 ];
 
@@ -247,9 +257,12 @@ app.message(/(messa di voce).*/i, async ({ message, say }) => {
 
 // yes
 app.message(/(boba).*/i, async ({ message, say }) => {
-  await say(`:boba1::boba2:
-:boba3::boba4:
-:boba5::boba6:`);
+  const choices = [":boba1::boba2:\n:boba3::boba4:\n:boba5::boba6:",
+                   "BOBAAAAAA",
+                   ":boba:",
+                   ":bobacat:",
+                   ":bobaparrot:"];
+  await say(choices[Math.floor(Math.random() * choices.length)]);
 
   console.log(`Responded to message from ${message.user}`);
 
