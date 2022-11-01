@@ -43,6 +43,8 @@ const memeLinks = [
                   'https://i.groupme.com/2048x1366.jpeg.1aafacaebe1c49599a67d03c7a48b5e8' //wholesome meme
                 ];
 
+// https://slack-files.com/T7SAV7LAD-F048AJHC0GP-483be130fa // link to THAT'S IT
+
 // a life test
 app.message(/(aloha).*/i, async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
@@ -76,6 +78,11 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                     ':amaze:',
                     ':dicaprio_laugh:',
                     ':bear_roll',
+                    '@Trip ya might want to see a doctor for all those :shaking-eyes: reaccs... :lizard-hehehehe:',
+                    ':0_0:',
+                    'Another random shout-out to our lovely social chairs for bringing us closer :meow_heart::cat-meow-hearts::heart::heart::heart:',
+                    ':exploding_head: when the basses hit that low D :mindblown::weary::sweat_drops::walter_faint:',
+                    'Friendship ended with GroupMe, now Slack is my best friend',
                    //cool(),
                    //'Meet me at MemSquirt',
                    /*
@@ -114,6 +121,8 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                    //'Mmmmm that post was so ʻono! nom nom nom',
                    'catfacts_trigger', // Will pick random cat fact
                    'catfacts_trigger', // Mohr kat faxs
+                   'catfacts_trigger', // Mohrrr kat faxs
+                   'catfacts_trigger', // Mohrrrrrr kat faxs
                    '',  // empty text will indicate the need for meme-ing ;)
                    '',  // Add a few for increased meme chances
                    ''
@@ -129,7 +138,8 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                        "And it's time for... random cat facts! ",
                        //"Cat Facts! 😜 ",
                        "It's meow time~ ",
-                       'Oh my, would you look at the time?! It\'s time for.... a cat fact!! 😜'
+                       ':meow_knife: more katfax or else... ',
+                       'Oh my, would you look at the time?! It\'s time for.... a cat fact!! 😜 '
                      ];
 
       const cat_flair = [
