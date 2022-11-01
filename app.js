@@ -193,7 +193,7 @@ app.message(/(h.?wh[yae]).*/i, async ({ message, context, say }) => {
                   ];
 
     await say(choices[Math.floor(Math.random() * choices.length)]);
-    console.log(`Responded to message from ${message.user} aka <@${message.user}>`);
+    console.log(`Responded to message from ${message.user}`);
   }
 });
 
