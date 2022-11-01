@@ -71,7 +71,7 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                     'THAT\'S IT!!!',
                     ':10_10:',
                     ':resitas:',
-                    ':cooldoge:'
+                    ':cooldoge:',
                     ':tobu:',
                     ':amaze:',
                     ':dicaprio_laugh:',
