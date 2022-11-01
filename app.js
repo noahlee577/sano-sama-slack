@@ -127,7 +127,7 @@ app.message(/(sano|steve).*/i, async ({ message, context, say }) => {
                    '',  // Add a few for increased meme chances
                    ''
                   ];
-    picked_response = choices[Math.floor(Math.random() * choices.length)];
+    var picked_response = choices[Math.floor(Math.random() * choices.length)];
 
     if (picked_response.match('catfacts_trigger')){
       const cat_intro = [
@@ -188,7 +188,8 @@ app.message(/(h.?wh[yae]).*/i, async ({ message, context, say }) => {
     // RegExp matches are inside of context.matches
     // const greeting = context.matches[0];
     const choices = ['I\'m loving the hhhhwh in that. thank you 🥰🥰',
-                   'F`ing delicious. Thank you for the beautiful hhwwwh. mHWaH'
+                   'F`ing delicious. Thank you for the beautiful hhwwwh. mHWaH',
+                   `You just made my day ${message.user}, thank you`
                   ];
 
     await say(choices[Math.floor(Math.random() * choices.length)]);
