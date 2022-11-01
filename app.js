@@ -189,11 +189,11 @@ app.message(/(h.?wh[yae]).*/i, async ({ message, context, say }) => {
     // const greeting = context.matches[0];
     const choices = ['I\'m loving the hhhhwh in that. thank you 🥰🥰',
                    'F`ing delicious. Thank you for the beautiful hhwwwh. mHWaH',
-                   `You just made my day <@${message.user}>!, thank you`
+                   `You just made my day <@${message.user}>! thank you :cat-meow-hearts:`
                   ];
 
     await say(choices[Math.floor(Math.random() * choices.length)]);
-    console.log(`Responded to message from ${message.user}`);
+    console.log(`Responded to message from ${message.user} aka <@${message.user}>`);
   }
 });
 
