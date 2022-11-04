@@ -197,9 +197,9 @@ app.message(/(h[\S]{0,1}wh[yae]).*/i, async ({ message, context, say }) => {
   }
 });
 
-app.message(/([^h][\S]{0,1}what)/i, async ({ message, say }) => {
+app.message(/([^h]what)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       await say('*Hwhat');
     }
 
@@ -207,9 +207,9 @@ app.message(/([^h][\S]{0,1}what)/i, async ({ message, say }) => {
   }
 });
 
-app.message(/([^h][\S]{0,1}why)/i, async ({ message, say }) => {
+app.message(/([^h]why)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       await say('*Hwhy');
     }
 
@@ -218,9 +218,9 @@ app.message(/([^h][\S]{0,1}why)/i, async ({ message, say }) => {
 });
 
 
-app.message(/([^h][\S]{0,1}when)/i, async ({ message, say }) => {
+app.message(/([^h]when)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       await say('*Hwhen');
     }
 
@@ -228,9 +228,9 @@ app.message(/([^h][\S]{0,1}when)/i, async ({ message, say }) => {
   }
 });
 
-app.message(/([^h][\S]{0,1}where)/i, async ({ message, say }) => {
+app.message(/([^h]where)/i, async ({ message, say }) => {
   if(message.user != "USLACKBOT"){
-    if(Math.floor(Math.random() * 3)%2 == 0){
+    if(Math.floor(Math.random() * 4)%3 == 0){
       const roll = Math.floor(Math.random() * 5)%4;
 
       if(roll == 0){
