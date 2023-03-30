@@ -1,6 +1,10 @@
 # It's Steve on Slack (key) :)
 
 Adapted from Bolt bot
+
+
+The following comments exist from the template for future reference:
+
 # Bolt ![Bolt logo](docs/assets/bolt-logo.svg) for JavaScript
 
 [![codecov](https://codecov.io/gh/slackapi/bolt-js/branch/main/graph/badge.svg?token=x4oCgiexvp)](https://codecov.io/gh/slackapi/bolt-js)
